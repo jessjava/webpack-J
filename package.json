@@ -1,0 +1,29 @@
+{
+  "name": "webpack-j",
+  "version": "1.0.0",
+  "description": "webpack-wujia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development --progress --colors src/es6/index.js --output ./op/main2.js",
+    "dev-es5": "webpack --mode development src/es6/index.js --output ./op/main-babel.js --module-bind js=babel-loader",
+    "build": "webpack --mode production --profile --json > ./state.json --output ./op/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessjava/webpack-J.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jessjava/webpack-J/issues"
+  },
+  "homepage": "https://github.com/jessjava/webpack-J#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
